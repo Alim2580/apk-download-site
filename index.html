@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>LORDS V2RAY VPN | DIGITAL EDITION</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@900&family=Roboto:wght@500;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --play-green: #005F02; 
+            --logo-blue: #162E93; 
+            --pure-gold: #003049;
+            --brand-purple: #8C30AC;
+            --cancel-red: #e53935;
+            --bg-color: #f5f7fa;
+            --card-bg: #ffffff;
+            --text-color: #333333;
+            --border-color: #eeeeee;
+        }
+
+        [data-theme="dark"] {
+            --bg-color: #121212;
+            --card-bg: #1e1e1e;
+            --text-color: #e0e0e0;
+            --border-color: #333333;
+        }
+
+        * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; transition: background 0.3s, color 0.3s; }
+        body { margin: 0; padding: 0; font-family: 'Roboto', sans-serif; background-color: var(--bg-color); color: var(--text-color); overflow-x: hidden; }
+
+        /* Theme Switch */
+        .theme-switch-wrapper { position: fixed; top: 42px; right: 25px; z-index: 3000; display: flex; flex-direction: column; align-items: center; }
+        .bulb-wire { width: 2px; height: 35px; background: #333; transform-origin: top; animation: wire-swing 3.5s ease-in-out infinite; }
+        .theme-switch { background: #fff; border: 2px solid #444; width: 45px; height: 45px; border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer; font-size: 20px; animation: wire-swing 3.5s ease-in-out infinite; transform-origin: center -35px; color: #777; }
+        [data-theme="light"] .theme-switch { color: #fbc02d; box-shadow: 0 0 15px #ffd700, 0 0 30px #ffd700; border-color: #ffd700; }
+        @keyframes wire-swing { 0% { transform: rotate(-8deg); } 50% { transform: rotate(8deg); } 100% { transform: rotate(-8deg); } }
+
+        .whatsapp-float { position: fixed; bottom: 20px; right: 20px; background: #25d366; color: white; width: 55px; height: 55px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 30px; box-shadow: 0 5px 15px rgba(0,0,0,0.3); z-index: 3000; text-decoration: none; }
+
+        .marquee-wrapper { background: var(--logo-blue); color: white; height: 42px; line-height: 42px; position: sticky; top: 0; z-index: 2000; border-bottom: 2px solid var(--pure-gold); }
+        .marquee-content { display: inline-block; white-space: nowrap; padding-left: 100%; animation: marquee-run 25s linear infinite; font-size: 14px; font-weight: bold; }
+        @keyframes marquee-run { 0% { transform: translateX(0); } 100% { transform: translateX(-100%); } }
+
+        .royal-app-section { width: 100%; padding: 25px 18px 10px 18px; display: flex; justify-content: center; }
+        .royal-cyber-box { background: var(--logo-blue); width: 100%; max-width: 440px; min-height: 120px; padding: 20px; border-radius: 22px; display: flex; align-items: center; gap: 18px; border: 3px solid var(--pure-gold); box-shadow: 0 12px 30px rgba(0, 0, 0, 0.45); }
+        .royal-logo-box { width: 85px; height: 85px; background: #fff; border-radius: 18px; padding: 5px; border: 2.5px solid var(--pure-gold); flex-shrink: 0; }
+        .royal-logo-box img { width: 100%; height: 100%; border-radius: 12px; object-fit: cover; }
+        .royal-app-name { font-family: 'Exo 2', sans-serif; font-size: 26px; font-weight: 900; color: #ffffff; text-transform: uppercase; margin: 0; }
+        .royal-subtitle { color: rgba(255, 255, 255, 0.9); font-size: 11px; text-transform: uppercase; font-weight: 800; display: block; margin-top: 2px; }
+
+        .features-grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; width: 100%; max-width: 440px; margin: 15px auto; padding: 0 18px; }
+        .feature-box-item { padding: 10px 5px; border-radius: 12px; text-align: center; color: white; font-size: 10px; font-weight: 900; display: flex; flex-direction: column; align-items: center; gap: 5px; text-transform: uppercase; box-shadow: inset 0 -3px 0 rgba(0,0,0,0.2), 0 5px 12px rgba(0,0,0,0.15); min-height: 75px; }
+        .feature-box-item i { font-size: 22px; filter: drop-shadow(2px 3px 2px rgba(0,0,0,0.3)); }
+        .bg-unlimited { background: linear-gradient(145deg, #ff416c, #ff4b2b); } 
+        .bg-secure { background: linear-gradient(145deg, #00b09b, #96c93d); } 
+        .bg-fast { background: linear-gradient(145deg, #2193b0, #6dd5ed); }
+
+        .stats-container { width: 100%; max-width: 430px; margin: 0 auto; padding: 10px 18px; }
+        .modern-stats-card { background: var(--card-bg); border-radius: 18px; display: grid; grid-template-columns: repeat(3, 1fr); padding: 18px 5px; box-shadow: 0 10px 35px rgba(0,0,0,0.05); border: 1.5px solid var(--border-color); text-align: center; }
+        .stat-item { position: relative; display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 75px; }
+        .stat-item:not(:last-child)::after { content: ""; position: absolute; right: 0; top: 15%; height: 70%; width: 1.5px; background: var(--border-color); }
+        .stat-value { font-family: 'Exo 2', sans-serif; font-size: 23px; font-weight: 900; line-height: 1; }
+        .stat-label { font-size: 11px; font-weight: 900; color: var(--text-color); text-transform: uppercase; margin-top: 6px; }
+        .c-red { color: #e53935; } .c-green { color: var(--play-green); } .c-blue { color: #1a73e8; }
+
+        .btn-container { width: 100%; max-width: 440px; margin: 20px auto; padding: 0 18px; }
+        .modern-btn { position: relative; background: var(--logo-blue); color: #ffffff; border: 2px solid var(--pure-gold); width: 100%; height: 65px; border-radius: 18px; font-size: 22px; font-weight: 900; cursor: pointer; overflow: hidden; display: flex; align-items: center; justify-content: center; box-shadow: 0 8px 20px rgba(22, 46, 147, 0.3); text-transform: uppercase; }
+        .download-progress-bg { position: absolute; left: 0; top: 0; height: 100%; width: 0%; background: var(--play-green); transition: width 0.4s ease-in-out; z-index: 1; }
+        .btn-text { position: relative; z-index: 2; display: flex; align-items: center; gap: 8px; }
+
+        .ripple { position: absolute; background: rgba(255, 255, 255, 0.4); transform: translate(-50%, -50%); pointer-events: none; border-radius: 50%; animation: ripple-animation 0.5s linear; }
+        @keyframes ripple-animation { from { width: 0px; height: 0px; opacity: 0.6; } to { width: 500px; height: 500px; opacity: 0; } }
+
+        .dot-flashing { display: inline-flex; gap: 4px; }
+        .dot-flashing span { width: 6px; height: 6px; background-color: #fff; border-radius: 50%; animation: dot-pulse 1.5s infinite ease-in-out; }
+        .dot-flashing span:nth-child(2) { animation-delay: 0.2s; }
+        .dot-flashing span:nth-child(3) { animation-delay: 0.4s; }
+        @keyframes dot-pulse { 0%, 100% { transform: scale(0.5); opacity: 0.3; } 50% { transform: scale(1.2); opacity: 1; } }
+
+        .screenshot-outer-container { width: 100%; max-width: 440px; margin: 15px auto; padding: 0 18px; }
+        .screenshot-box { background: var(--card-bg); border-radius: 20px; padding: 18px 0; border: 2.5px solid #000; overflow: hidden; }
+        .screenshot-tray { display: flex; gap: 15px; overflow-x: auto; padding: 0 18px; scrollbar-width: none; }
+        .shot-container { min-width: 170px; height: 300px; border-radius: 15px; overflow: hidden; border: 1.5px solid var(--border-color); flex-shrink: 0; }
+        .shot-container img { width: 100%; height: 100%; object-fit: cover; }
+
+        .saudi-system-wrapper { width: 100%; max-width: 440px; margin: 25px auto; padding: 0 18px; }
+        .notice-box { background: var(--card-bg); color: var(--text-color); padding: 15px; border-radius: 15px; text-align: center; margin-bottom: 25px; font-weight: 800; font-size: 14px; border-left: 5px solid var(--logo-blue); box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
+        .main-card { background: var(--card-bg); border-radius: 30px; padding: 25px 15px; box-shadow: 0 25px 50px rgba(0,0,0,0.1); border: 1px solid var(--border-color); }
+        .header-title-box { background: var(--logo-blue); color: white; padding: 12px; border-radius: 15px; text-align: center; margin-bottom: 30px; }
+        .header-title-box h3 { margin: 0; font-family: 'Exo 2', sans-serif; font-size: 16px; font-weight: 900; }
+        
+        .pkg-card { background: var(--bg-color); border-radius: 20px; padding: 20px 15px; border: 1.5px solid var(--border-color); position: relative; margin-bottom: 35px; width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 10px; }
+        .pkg-badge { background: var(--logo-blue); color: #ffffff; font-size: 10px; font-weight: 800; padding: 5px 12px; border-radius: 10px; position: absolute; top: -14px; left: 15px; text-transform: uppercase; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
+        .pkg-logo-right { width: 65px; height: 65px; background: #fff; border-radius: 12px; display: flex; align-items: center; justify-content: center; padding: 5px; flex-shrink: 0; border: 1px solid #eee; }
+        .pkg-logo-right img { width: 100%; height: 100%; object-fit: contain; }
+        .pkg-name { color: var(--text-color); font-size: 15px; font-weight: 900; display: block; margin-bottom: 12px; }
+
+        .sms-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; width: 100%; max-width: 190px; }
+        .sms-item { background: #ffffff; border: 2px solid #000; padding: 8px 2px; border-radius: 12px; text-align: center; min-height: 58px; display: flex; flex-direction: column; justify-content: center; align-items: center; }
+        .sms-label { font-size: 9px; color: #555; font-weight: 800; display: block; text-transform: uppercase; margin-bottom: 2px; }
+        .sms-value { font-size: 17px; color: #000; font-weight: 900; line-height: 1; }
+        
+        .dial-box { background: #ffffff; border: 2px solid #000; color: var(--brand-purple); padding: 12px; font-size: 19px; font-weight: 900; border-radius: 12px; text-align: center; width: 100%; }
+
+        .buy-app-btn { display: flex; align-items: center; justify-content: center; gap: 8px; background: var(--play-green); color: #fff; padding: 12px; border-radius: 12px; text-decoration: none; font-weight: 900; font-size: 14px; border: 2px solid #000; width: 100%; box-shadow: 0 4px 0 #003301; text-transform: uppercase; }
+        .buy-app-btn:active { transform: translateY(2px); box-shadow: none; }
+
+        /* Cancel Styles */
+        .header-cancel { background: var(--cancel-red) !important; }
+        .badge-cancel { background: var(--cancel-red) !important; }
+        .border-cancel { border-color: var(--cancel-red) !important; }
+
+        footer { text-align: center; padding: 30px 20px; font-size: 11px; color: #5f6368; }
+    </style>
+</head>
+<body data-theme="light">
+
+    <div class="theme-switch-wrapper">
+        <div class="bulb-wire"></div>
+        <div class="theme-switch" id="themeBtn" onclick="toggleTheme()">
+            <i class="fas fa-lightbulb"></i>
+        </div>
+    </div>
+
+    <a href="https://api.whatsapp.com/send?text=Lords V2Ray VPN ডাউনলোড করুন: https://rj-tech.site" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <div class="marquee-wrapper">
+        <div class="marquee-content">🚀 HIGH-SPEED VPN ⚡ BEST TECHNOLOGY ⚡ FAST & SECURE 🌐 LORDS V2RAY VPN 🌐</div>
+    </div>
+
+    <div class="royal-app-section">
+        <div class="royal-cyber-box">
+            <div class="royal-logo-box"><img src="lords.png" alt="Logo"></div>
+            <div class="royal-app-details">
+                <h1 class="royal-app-name">LORDS EXTRA V2RAY</h1>
+                <span class="royal-subtitle">HIGH SPEED V2RAY VPN</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="features-grid-3">
+        <div class="feature-box-item bg-unlimited"><i class="fas fa-infinity"></i><span>Unlimited</span></div>
+        <div class="feature-box-item bg-secure"><i class="fas fa-shield-halved"></i><span>100% Secure</span></div>
+        <div class="feature-box-item bg-fast"><i class="fas fa-bolt-lightning"></i><span>Ultra Fast</span></div>
+    </div>
+
+    <div class="stats-container">
+        <div class="modern-stats-card">
+            <div class="stat-item"><span class="stat-value c-red">4.9 ★</span><span class="stat-label">Reviews</span></div>
+            <div class="stat-item"><span class="stat-value c-green" id="download-display">..+</span><span class="stat-label">Downloads</span></div>
+            <div class="stat-item"><span class="stat-value c-blue">91 MB</span><span class="stat-label">Size</span></div>
+        </div>
+    </div>
+
+    <div class="btn-container">
+        <button class="modern-btn" id="dlBtn" onclick="createRipple(event); processDownload()">
+            <div class="download-progress-bg" id="progressFill"></div>
+            <span class="btn-text" id="btnLabel">INSTALL APP</span>
+        </button>
+    </div>
+
+    <div class="screenshot-outer-container">
+        <div class="screenshot-box">
+            <div class="screenshot-tray">
+                <div class="shot-container"><img src="screenshot1.png"></div>
+                <div class="shot-container"><img src="screenshot2.png"></div>
+                <div class="shot-container"><img src="screenshot3.png"></div>
+                <div class="shot-container"><img src="screenshot4.png"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="saudi-system-wrapper">
+        <div class="notice-box">সৌদি আরবে আপনার পচ্ছন্দের সিমের প্যাকেজ কিনতে নিচে কোড গুলো দেখুন👇</div>
+        <div class="main-card">
+            <div class="header-title-box"><h3>SAUDI ARABIA INTERNET SYSTEM</h3></div>
+            
+            <div class="pkg-card">
+                <div class="pkg-info-side">
+                    <span class="pkg-badge">MOBILY NETWORK</span>
+                    <span class="pkg-name">🇸🇦 30 SAR DATA PACKAGE</span>
+                    <div class="sms-grid">
+                        <div class="sms-item"><span class="sms-label">📩 Send</span><span class="sms-value">1100</span></div>
+                        <div class="sms-item"><span class="sms-label">✍️ Type</span><span class="sms-value">8294</span></div>
+                    </div>
+                </div>
+                <div class="pkg-logo-right"><img src="mobily_logo.png" alt="Mobily"></div>
+            </div>
+            
+            <div class="pkg-card">
+                <div class="pkg-info-side">
+                    <span class="pkg-badge">MOBILY NETWORK</span>
+                    <span class="pkg-name">🇸🇦 60 SAR DATA PACKAGE</span>
+                    <div class="sms-grid">
+                        <div class="sms-item"><span class="sms-label">📩 Send</span><span class="sms-value">1100</span></div>
+                        <div class="sms-item"><span class="sms-label">✍️ Type</span><span class="sms-value">440</span></div>
+                    </div>
+                </div>
+                <div class="pkg-logo-right"><img src="mobily_logo.png" alt="Mobily"></div>
+            </div>
+
+            <div class="pkg-card">
+                <div class="pkg-info-side">
+                    <span class="pkg-badge">ZAIN NETWORK</span>
+                    <span class="pkg-name">🇸🇦 (25 SAR) SOCIAL PACKAGE</span>
+                    <div class="sms-grid">
+                        <div class="sms-item"><span class="sms-label">📩 Send</span><span class="sms-value">959</span></div>
+                        <div class="sms-item"><span class="sms-label">✍️ Type</span><span class="sms-value">Y25</span></div>
+                    </div>
+                </div>
+                <div class="pkg-logo-right"><img src="zain_logo.png" alt="Zain"></div>
+            </div>
+
+            <div class="pkg-card">
+                <div class="pkg-info-side">
+                    <span class="pkg-badge">JAWWAY NETWORK</span>
+                    <span class="pkg-name">🇸🇦( 60 SAR) JAWWAY DATA PACKAGE</span>
+                    <a href="https://play.google.com/store/apps/details?id=com.jawwyevo_main.app" class="buy-app-btn"><i class="fas fa-shopping-cart"></i> BUY FROM APP</a>
+                </div>
+                <div class="pkg-logo-right"><img src="jawway.png" alt="Jawway"></div>
+            </div>
+
+            <div class="pkg-card">
+                <div class="pkg-info-side">
+                    <span class="pkg-badge">REDBULL NETWORK</span>
+                    <span class="pkg-name">🇸🇦 (60 SAR) REDBULL DATA PACKAGE</span>
+                    <a href="https://play.google.com/store/apps/details?id=com.mediapark.rbm" class="buy-app-btn"><i class="fas fa-shopping-cart"></i> BUY FROM APP</a>
+                </div>
+                <div class="pkg-logo-right"><img src="redbull.png" alt="Redbull"></div>
+            </div>
+
+            <div class="pkg-card">
+                <div class="pkg-info-side">
+                    <span class="pkg-badge" style="background: var(--brand-purple);">LEBARA NETWORK</span>
+                    <span class="pkg-name">🇸🇦 60 SR DATA PACKAGE</span>
+                    <div class="dial-box">Dial *77*019#</div>
+                </div>
+                <div class="pkg-logo-right" style="border-color: var(--brand-purple);"><img src="lebara_logo.png" alt="Lebara"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="saudi-system-wrapper" style="margin-top: 0;">
+        <div class="main-card border-cancel" style="border-top: 4px solid var(--cancel-red);">
+            <div class="header-title-box header-cancel">
+                <h3>PACKAGE CANCEL CODE</h3>
+            </div>
+            
+            <div class="pkg-card">
+                <div class="pkg-info-side">
+                    <span class="pkg-badge badge-cancel">MOBILY NETWORK</span>
+                    <span class="pkg-name">❌ 60 SR CANCEL PACKAGE</span>
+                    <div class="sms-grid">
+                        <div class="sms-item border-cancel"><span class="sms-label">📩 Send</span><span class="sms-value">1100</span></div>
+                        <div class="sms-item border-cancel"><span class="sms-label">✍️ Type</span><span class="sms-value">0440</span></div>
+                    </div>
+                </div>
+                <div class="pkg-logo-right"><img src="mobily_logo.png" alt="Mobily"></div>
+            </div>
+
+            <div class="pkg-card">
+                <div class="pkg-info-side">
+                    <span class="pkg-badge badge-cancel">MOBILY NETWORK</span>
+                    <span class="pkg-name">❌ 30 SR CANCEL PACKAGE</span>
+                    <div class="sms-grid">
+                        <div class="sms-item border-cancel"><span class="sms-label">📩 Send</span><span class="sms-value">1100</span></div>
+                        <div class="sms-item border-cancel"><span class="sms-label">✍️ Type</span><span class="sms-value">58299</span></div>
+                    </div>
+                </div>
+                <div class="pkg-logo-right"><img src="mobily_logo.png" alt="Mobily"></div>
+            </div>
+        </div>
+    </div>
+
+    <footer>Verified by Play Protect 🛡️<br>© 2026 RJ TECHNOLOGY</footer>
+
+    <script>
+        function toggleTheme() {
+            const body = document.body;
+            body.setAttribute('data-theme', body.getAttribute('data-theme') === 'light' ? 'dark' : 'light');
+        }
+
+        function createRipple(event) {
+            const button = event.currentTarget;
+            const circle = document.createElement("span");
+            const diameter = Math.max(button.clientWidth, button.clientHeight);
+            const rect = button.getBoundingClientRect();
+            circle.style.width = circle.style.height = ${diameter}px;
+            circle.style.left = ${event.clientX - rect.left}px;
+            circle.style.top = ${event.clientY - rect.top}px;
+            circle.classList.add("ripple");
+            const oldRipple = button.getElementsByClassName("ripple")[0];
+            if (oldRipple) { oldRipple.remove(); }
+            button.appendChild(circle);
+        }
+
+        function formatDownloads(num) {
+            if (num >= 1000000) return (num / 1000000).toFixed(1).replace(/\.0$/, '') + 'M';
+            if (num >= 1000) return (num / 1000).toFixed(1).replace(/\.0$/, '') + 'k';
+            return num;
+        }
+
+        window.addEventListener('DOMContentLoaded', () => {
+            fetch('count_api.php?get_only=true')
+                .then(res => res.text())
+                .then(data => {
+                    let count = parseInt(data) || 0;
+                    document.getElementById('download-display').innerHTML = formatDownloads(count) + "+";
+                })
+                .catch(() => { document.getElementById('download-display').innerHTML = "15k+"; });
+        });
+
+        function processDownload() {
+            const btn = document.getElementById('dlBtn');
+            const label = document.getElementById('btnLabel');
+            const fill = document.getElementById('progressFill');
+            const display = document.getElementById('download-display');
+
+            btn.onclick = null;
+            btn.style.cursor = "default";
+            label.innerHTML = CONNECTING <div class="dot-flashing"><span></span><span></span><span></span></div>;
+            
+            setTimeout(() => { fill.style.width = "100%"; label.innerHTML = PREPARING FILE...; }, 500);
+
+            setTimeout(() => {
+                label.innerHTML = "✅ STARTING DOWNLOAD";
+                fetch('count_api.php')
+                    .then(res => res.text())
+                    .then(data => {
+                        let count = parseInt(data) || 0;
+                        if(display) display.innerHTML = formatDownloads(count) + "+";
+                        window.location.href = 'app.lords.apk';
+                    })
+                    .catch(() => { window.location.href = 'app.lords.apk'; });
+            }, 1500); 
+        }
+    </script>
+</body>
+</html>
