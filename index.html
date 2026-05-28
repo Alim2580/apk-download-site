@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>CLASSIC NET VPN | DIGITAL EDITION</title>
+    <title>CLASSIC NET VPN | APP STORE</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@900&family=Roboto:wght@500;700&display=swap" rel="stylesheet">
     
@@ -43,30 +43,22 @@
         .marquee-content { display: inline-block; white-space: nowrap; padding-left: 100%; animation: marquee-run 25s linear infinite; font-size: 14px; font-weight: bold; }
         @keyframes marquee-run { 0% { transform: translateX(0); } 100% { transform: translateX(-100%); } }
 
-        .royal-app-section { width: 100%; padding: 25px 18px 10px 18px; display: flex; justify-content: center; }
-        .royal-cyber-box { background: var(--logo-blue); width: 100%; max-width: 440px; min-height: 120px; padding: 20px; border-radius: 22px; display: flex; align-items: center; gap: 18px; border: 3px solid var(--pure-gold); box-shadow: 0 12px 30px rgba(0, 0, 0, 0.45); }
-        .royal-logo-box { width: 85px; height: 85px; background: #fff; border-radius: 18px; padding: 5px; border: 2.5px solid var(--pure-gold); flex-shrink: 0; }
-        .royal-logo-box img { width: 100%; height: 100%; border-radius: 12px; object-fit: cover; background: #eee; }
-        .royal-app-name { font-family: 'Exo 2', sans-serif; font-size: 26px; font-weight: 900; color: #ffffff; text-transform: uppercase; margin: 0; }
-        .royal-subtitle { color: rgba(255, 255, 255, 0.9); font-size: 11px; text-transform: uppercase; font-weight: 800; display: block; margin-top: 2px; }
+        /* Multi-App Store Layout */
+        .store-container { width: 100%; max-width: 440px; margin: 0 auto; padding: 15px 18px; display: flex; flex-direction: column; gap: 20px; }
+        
+        .app-card { background: var(--card-bg); border: 2px solid var(--border-color); border-radius: 22px; padding: 15px; box-shadow: 0 8px 20px rgba(0,0,0,0.05); display: flex; flex-direction: column; gap: 12px; }
+        
+        .app-info { display: flex; align-items: center; gap: 15px; }
+        .app-logo { width: 70px; height: 70px; background: #fff; border-radius: 16px; padding: 5px; border: 2px solid var(--border-color); flex-shrink: 0; }
+        .app-logo img { width: 100%; height: 100%; border-radius: 10px; object-fit: cover; }
+        
+        .app-details { flex-grow: 1; }
+        .app-name { font-family: 'Exo 2', sans-serif; font-size: 18px; font-weight: 900; color: var(--text-color); text-transform: uppercase; margin: 0; }
+        .app-meta { font-size: 11px; color: #777; font-weight: bold; margin-top: 3px; display: flex; gap: 10px; }
+        .app-meta span { color: var(--play-green); }
 
-        .features-grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; width: 100%; max-width: 440px; margin: 15px auto; padding: 0 18px; }
-        .feature-box-item { padding: 10px 5px; border-radius: 12px; text-align: center; color: white; font-size: 10px; font-weight: 900; display: flex; flex-direction: column; align-items: center; gap: 5px; text-transform: uppercase; box-shadow: inset 0 -3px 0 rgba(0,0,0,0.2), 0 5px 12px rgba(0,0,0,0.15); min-height: 75px; }
-        .feature-box-item i { font-size: 22px; filter: drop-shadow(2px 3px 2px rgba(0,0,0,0.3)); }
-        .bg-unlimited { background: linear-gradient(145deg, #ff416c, #ff4b2b); } 
-        .bg-secure { background: linear-gradient(145deg, #00b09b, #96c93d); } 
-        .bg-fast { background: linear-gradient(145deg, #2193b0, #6dd5ed); }
-
-        .stats-container { width: 100%; max-width: 430px; margin: 0 auto; padding: 10px 18px; }
-        .modern-stats-card { background: var(--card-bg); border-radius: 18px; display: grid; grid-template-columns: repeat(3, 1fr); padding: 18px 5px; box-shadow: 0 10px 35px rgba(0,0,0,0.05); border: 1.5px solid var(--border-color); text-align: center; }
-        .stat-item { position: relative; display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 75px; }
-        .stat-item:not(:last-child)::after { content: ""; position: absolute; right: 0; top: 15%; height: 70%; width: 1.5px; background: var(--border-color); }
-        .stat-value { font-family: 'Exo 2', sans-serif; font-size: 23px; font-weight: 900; line-height: 1; }
-        .stat-label { font-size: 11px; font-weight: 900; color: var(--text-color); text-transform: uppercase; margin-top: 6px; }
-        .c-red { color: #e53935; } .c-green { color: var(--play-green); } .c-blue { color: #1a73e8; }
-
-        .btn-container { width: 100%; max-width: 440px; margin: 20px auto; padding: 0 18px; }
-        .modern-btn { position: relative; background: var(--logo-blue); color: #ffffff; border: 2px solid var(--pure-gold); width: 100%; height: 65px; border-radius: 18px; font-size: 22px; font-weight: 900; cursor: pointer; overflow: hidden; display: flex; align-items: center; justify-content: center; box-shadow: 0 8px 20px rgba(22, 46, 147, 0.3); text-transform: uppercase; }
+        /* Modern Download Button System */
+        .modern-btn { position: relative; background: var(--logo-blue); color: #ffffff; border: 2px solid var(--pure-gold); width: 100%; height: 50px; border-radius: 14px; font-size: 16px; font-weight: 900; cursor: pointer; overflow: hidden; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 12px rgba(22, 46, 147, 0.2); text-transform: uppercase; }
         .download-progress-bg { position: absolute; left: 0; top: 0; height: 100%; width: 0%; background: var(--play-green); transition: width 0.4s ease-in-out; z-index: 1; }
         .btn-text { position: relative; z-index: 2; display: flex; align-items: center; gap: 8px; }
 
@@ -74,10 +66,13 @@
         @keyframes ripple-animation { from { width: 0px; height: 0px; opacity: 0.6; } to { width: 500px; height: 500px; opacity: 0; } }
 
         .dot-flashing { display: inline-flex; gap: 4px; }
-        .dot-flashing span { width: 6px; height: 6px; background-color: #fff; border-radius: 50%; animation: dot-pulse 1.5s infinite ease-in-out; }
+        .dot-flashing span { width: 5px; height: 5px; background-color: #fff; border-radius: 50%; animation: dot-pulse 1.5s infinite ease-in-out; }
         .dot-flashing span:nth-child(2) { animation-delay: 0.2s; }
         .dot-flashing span:nth-child(3) { animation-delay: 0.4s; }
         @keyframes dot-pulse { 0%, 100% { transform: scale(0.5); opacity: 0.3; } 50% { transform: scale(1.2); opacity: 1; } }
+
+        /* Notice Box Blue Fixed */
+        .notice-box { background: var(--logo-blue); color: #ffffff; padding: 15px; border-radius: 15px; text-align: center; margin-bottom: 25px; font-weight: 800; font-size: 14px; border-left: 5px solid var(--pure-gold); box-shadow: 0 5px 15px rgba(0,0,0,0.15); }
 
         .screenshot-outer-container { width: 100%; max-width: 440px; margin: 15px auto; padding: 0 18px; }
         .screenshot-box { background: var(--card-bg); border-radius: 20px; padding: 18px 0; border: 2.5px solid #000; overflow: hidden; }
@@ -86,18 +81,6 @@
         .shot-container img { width: 100%; height: 100%; object-fit: cover; }
 
         .saudi-system-wrapper { width: 100%; max-width: 440px; margin: 25px auto; padding: 0 18px; }
-        .notice-box { 
-    background: var(--logo-blue); 
-    color: #ffffff; 
-    padding: 15px; 
-    border-radius: 15px; 
-    text-align: center; 
-    margin-bottom: 25px; 
-    font-weight: 800; 
-    font-size: 14px; 
-    border-left: 5px solid var(--pure-gold); 
-    box-shadow: 0 5px 15px rgba(0,0,0,0.15); 
-}
         .main-card { background: var(--card-bg); border-radius: 30px; padding: 25px 15px; box-shadow: 0 25px 50px rgba(0,0,0,0.1); border: 1px solid var(--border-color); }
         .header-title-box { background: var(--logo-blue); color: white; padding: 12px; border-radius: 15px; text-align: center; margin-bottom: 30px; }
         .header-title-box h3 { margin: 0; font-family: 'Exo 2', sans-serif; font-size: 16px; font-weight: 900; }
@@ -114,11 +97,8 @@
         .sms-value { font-size: 17px; color: #000; font-weight: 900; line-height: 1; }
         
         .dial-box { background: #ffffff; border: 2px solid #000; color: var(--brand-purple); padding: 12px; font-size: 19px; font-weight: 900; border-radius: 12px; text-align: center; width: 100%; }
-
         .buy-app-btn { display: flex; align-items: center; justify-content: center; gap: 8px; background: var(--play-green); color: #fff; padding: 12px; border-radius: 12px; text-decoration: none; font-weight: 900; font-size: 14px; border: 2px solid #000; width: 100%; box-shadow: 0 4px 0 #003301; text-transform: uppercase; }
-        .buy-app-btn:active { transform: translateY(2px); box-shadow: none; }
 
-        /* Cancel Styles */
         .header-cancel { background: var(--cancel-red) !important; }
         .badge-cancel { background: var(--cancel-red) !important; }
         .border-cancel { border-color: var(--cancel-red) !important; }
@@ -135,45 +115,87 @@
         </div>
     </div>
 
-   <a href="https://api.whatsapp.com/send?phone=8801324143150&text=Welcome To Classic Telecom" class="whatsapp-float" target="_blank">
+    <a href="https://api.whatsapp.com/send?phone=8801324143150&text=Classic%20Net%20VPN%20%E0%A6%A1%E0%A6%BE%E0%A6%8Stop%E0%A6%B2%E0%A7%8B%E0%A6%A1%20%E0%A6%95%E0%A6%B0%E0%A7%81%E0%A6%A8" class="whatsapp-float" target="_blank">
         <i class="fab fa-whatsapp"></i>
     </a>
 
     <div class="marquee-wrapper">
-        <div class="marquee-content">🚀 HIGH-SPEED VPN ⚡ BEST TECHNOLOGY ⚡ FAST & SECURE 🌐 CLASSIC NET VPN 🌐</div>
+        <div class="marquee-content">🚀 HIGH-SPEED VPN ⚡ BEST TECHNOLOGY ⚡ FAST & SECURE 🌐 CLASSIC NET VPN STORE 🌐</div>
     </div>
 
-    <div class="royal-app-section">
-        <div class="royal-cyber-box">
-            <div class="royal-logo-box"><img src="https://i.postimg.cc/V6RZWHXg/clasic-logo.png" onerror="this.src='https://via.placeholder.com/85?text=VPN'" alt="Logo"></div>
-            <div class="royal-app-details">
-                <h1 class="royal-app-name">CLASSIC NET VPN</h1>
-                <span class="royal-subtitle">HIGH SPEED VPN SERVICE</span>
+    <div class="store-container">
+        
+        <div class="app-card">
+            <div class="app-info">
+                <div class="app-logo"><img src="lords.png" onerror="this.src='https://via.placeholder.com/70?text=VPN1'" alt="Logo"></div>
+                <div class="app-details">
+                    <h2 class="app-name">CLASSIC NET VPN</h2>
+                    <div class="app-meta"><span>4.9 ★</span> | 91 MB | <span id="count-1">25.4k+</span> Downloads</div>
+                </div>
             </div>
+            <button class="modern-btn" onclick="createRipple(event); startAppDownload(1, 'https://gitlab.com/satechnology25/oneclick/-/raw/main/CLASIC_NET_VPN.apk')">
+                <div class="download-progress-bg" id="fill-1"></div>
+                <span class="btn-text" id="label-1">INSTALL APP 1</span>
+            </button>
         </div>
-    </div>
 
-    <div class="features-grid-3">
-        <div class="feature-box-item bg-unlimited"><i class="fas fa-infinity"></i><span>Unlimited</span></div>
-        <div class="feature-box-item bg-secure"><i class="fas fa-shield-halved"></i><span>100% Secure</span></div>
-        <div class="feature-box-item bg-fast"><i class="fas fa-bolt-lightning"></i><span>Ultra Fast</span></div>
-    </div>
-
-    <div class="stats-container">
-        <div class="modern-stats-card">
-            <div class="stat-item"><span class="stat-value c-red">4.9 ★</span><span class="stat-label">Reviews</span></div>
-            <div class="stat-item"><span class="stat-value c-green" id="download-display">25k+</span><span class="stat-label">Downloads</span></div>
-            <div class="stat-item"><span class="stat-value c-blue">91 MB</span><span class="stat-label">Size</span></div>
+        <div class="app-card">
+            <div class="app-info">
+                <div class="app-logo"><img src="lords2.png" onerror="this.src='https://via.placeholder.com/70?text=VPN2'" alt="Logo"></div>
+                <div class="app-details">
+                    <h2 class="app-name">ONE CLICK VPN</h2>
+                    <div class="app-meta"><span>4.8 ★</span> | 45 MB | <span id="count-2">12.1k+</span> Downloads</div>
+                </div>
+            </div>
+            <button class="modern-btn" onclick="createRipple(event); startAppDownload(2, 'https://gitlab.com/satechnology25/oneclick/-/raw/main/ONE_CLICK_VPN.apk')">
+                <div class="download-progress-bg" id="fill-2"></div>
+                <span class="btn-text" id="label-2">INSTALL APP 2</span>
+            </button>
         </div>
-    </div>
 
-    <div class="btn-container">
-        <button class="modern-btn" id="dlBtn" onclick="createRipple(event); processDownload()">
-            <div class="download-progress-bg" id="progressFill"></div>
-            <span class="btn-text" id="btnLabel">INSTALL APP</span>
-        </button>
-    </div>
+        <div class="app-card">
+            <div class="app-info">
+                <div class="app-logo"><img src="lords3.png" onerror="this.src='https://via.placeholder.com/70?text=VPN3'" alt="Logo"></div>
+                <div class="app-details">
+                    <h2 class="app-name">ROYAL VIP NET</h2>
+                    <div class="app-meta"><span>4.7 ★</span> | 52 MB | <span id="count-3">8.5k+</span> Downloads</div>
+                </div>
+            </div>
+            <button class="modern-btn" onclick="createRipple(event); startAppDownload(3, 'https://gitlab.com/satechnology25/oneclick/-/raw/main/ROYAL_VIP_NET.apk')">
+                <div class="download-progress-bg" id="fill-3"></div>
+                <span class="btn-text" id="label-3">INSTALL APP 3</span>
+            </button>
+        </div>
 
+        <div class="app-card">
+            <div class="app-info">
+                <div class="app-logo"><img src="lords4.png" onerror="this.src='https://via.placeholder.com/70?text=VPN4'" alt="Logo"></div>
+                <div class="app-details">
+                    <h2 class="app-name">CYBER NET TUNNEL</h2>
+                    <div class="app-meta"><span>4.9 ★</span> | 61 MB | <span id="count-4">19.2k+</span> Downloads</div>
+                </div>
+            </div>
+            <button class="modern-btn" onclick="createRipple(event); startAppDownload(4, 'https://gitlab.com/satechnology25/oneclick/-/raw/main/CYBER_NET.apk')">
+                <div class="download-progress-bg" id="fill-4"></div>
+                <span class="btn-text" id="label-4">INSTALL APP 4</span>
+            </button>
+        </div>
+
+        <div class="app-card">
+            <div class="app-info">
+                <div class="app-logo"><img src="lords5.png" onerror="this.src='https://via.placeholder.com/70?text=VPN5'" alt="Logo"></div>
+                <div class="app-details">
+                    <h2 class="app-name">SAUDI FAST NET</h2>
+                    <div class="app-meta"><span>4.6 ★</span> | 38 MB | <span id="count-5">5.9k+</span> Downloads</div>
+                </div>
+            </div>
+            <button class="modern-btn" onclick="createRipple(event); startAppDownload(5, 'https://gitlab.com/satechnology25/oneclick/-/raw/main/SAUDI_FAST.apk')">
+                <div class="download-progress-bg" id="fill-5"></div>
+                <span class="btn-text" id="label-5">INSTALL APP 5</span>
+            </button>
+        </div>
+
+    </div>
     <div class="screenshot-outer-container">
         <div class="screenshot-box">
             <div class="screenshot-tray">
@@ -186,7 +208,7 @@
     </div>
 
     <div class="saudi-system-wrapper">
-        <div class="notice-box"><h3>সৌদি আরবে আপনার পচ্ছন্দের সিমের প্যাকেজ কিনতে নিচে কোড গুলো দেখুন👇</h3></div>
+        <div class="notice-box">সৌদি আরবে আপনার পচ্ছন্দের সিমের প্যাকেজ কিনতে নিচে কোড গুলো দেখুন👇</div>
         <div class="main-card">
             <div class="header-title-box"><h3>SAUDI ARABIA INTERNET SYSTEM</h3></div>
             
@@ -199,7 +221,7 @@
                         <div class="sms-item"><span class="sms-label">✍️ Type</span><span class="sms-value">8294</span></div>
                     </div>
                 </div>
-                <div class="pkg-logo-right"><img src="https://i.postimg.cc/QMzHMx2B/images-(14).png" onerror="this.src='https://via.placeholder.com/65?text=Mobily'" alt="Mobily"></div>
+                <div class="pkg-logo-right"><img src="1001444506.png" onerror="this.src='https://via.placeholder.com/65?text=Mobily'" alt="Mobily"></div>
             </div>
             
             <div class="pkg-card">
@@ -211,7 +233,7 @@
                         <div class="sms-item"><span class="sms-label">✍️ Type</span><span class="sms-value">440</span></div>
                     </div>
                 </div>
-                <div class="pkg-logo-right"><img src="https://i.postimg.cc/QMzHMx2B/images-(14).png" onerror="this.src='https://via.placeholder.com/65?text=Mobily'" alt="Mobily"></div>
+                <div class="pkg-logo-right"><img src="1001444506.png" onerror="this.src='https://via.placeholder.com/65?text=Mobily'" alt="Mobily"></div>
             </div>
 
             <div class="pkg-card">
@@ -270,7 +292,7 @@
                         <div class="sms-item border-cancel"><span class="sms-label">✍️ Type</span><span class="sms-value">0440</span></div>
                     </div>
                 </div>
-                <div class="pkg-logo-right"><img src="https://i.postimg.cc/QMzHMx2B/images-(14).png" onerror="this.src='https://via.placeholder.com/65?text=Mobily'" alt="Mobily"></div>
+                <div class="pkg-logo-right"><img src="1001444506.png" onerror="this.src='https://via.placeholder.com/65?text=Mobily'" alt="Mobily"></div>
             </div>
 
             <div class="pkg-card">
@@ -282,7 +304,7 @@
                         <div class="sms-item border-cancel"><span class="sms-label">✍️ Type</span><span class="sms-value">58299</span></div>
                     </div>
                 </div>
-                <div class="pkg-logo-right"><img src="https://i.postimg.cc/QMzHMx2B/images-(14).png" onerror="this.src='https://via.placeholder.com/65?text=Mobily'" alt="Mobily"></div>
+                <div class="pkg-logo-right"><img src="1001444506.png" onerror="this.src='https://via.placeholder.com/65?text=Mobily'" alt="Mobily"></div>
             </div>
         </div>
     </div>
@@ -315,45 +337,47 @@
             return num;
         }
 
+        // স্মার্ট কাউন্টার সিস্টেম (৫টি অ্যাপের জন্য আলাদা)
+        const defaultCounts = { 1: 25430, 2: 12150, 3: 8540, 4: 19200, 5: 5930 };
+
         window.addEventListener('DOMContentLoaded', () => {
-            let currentCount = localStorage.getItem('vpn_download_count');
-            if (!currentCount) {
-                currentCount = 25430; 
-                localStorage.setItem('vpn_download_count', currentCount);
+            for (let i = 1; i <= 5; i++) {
+                let currentCount = localStorage.getItem(`vpn_count_app_${i}`);
+                if (!currentCount) {
+                    currentCount = defaultCounts[i];
+                    localStorage.setItem(`vpn_count_app_${i}`, currentCount);
+                }
+                document.getElementById(`count-${i}`).innerHTML = formatDownloads(parseInt(currentCount)) + "+";
             }
-            document.getElementById('download-display').innerHTML = formatDownloads(parseInt(currentCount)) + "+";
         });
 
-        function processDownload() {
-            const btn = document.getElementById('dlBtn');
-            const label = document.getElementById('btnLabel');
-            const fill = document.getElementById('progressFill');
-            const display = document.getElementById('download-display');
+        // ৫টি অ্যাপের জন্য ডাইরেক্ট ডাউনলোড ফাংশন
+        function startAppDownload(appId, apkLink) {
+            const label = document.getElementById(`label-${appId}`);
+            const fill = document.getElementById(`fill-${appId}`);
+            const display = document.getElementById(`count-${appId}`);
             
-            // আপনার APK ফাইলের গিটল্যাব ডিরেক্ট লিংক
-            const apkLink = 'https://gitlab.com/satechnology25/oneclick/-/raw/main/CLASIC_NET_VPN.apk'; 
-
-            btn.onclick = null;
-            btn.style.cursor = "default";
             label.innerHTML = `CONNECTING <div class="dot-flashing"><span></span><span></span><span></span></div>`;
             
-            setTimeout(() => { fill.style.width = "100%"; label.innerHTML = `PREPARING FILE...`; }, 500);
+            setTimeout(() => { 
+                fill.style.width = "100%"; 
+                label.innerHTML = `PREPARING APK...`; 
+            }, 500);
 
             setTimeout(() => {
-                label.innerHTML = "✅ STARTING DOWNLOAD";
+                label.innerHTML = "✅ DOWNLOADING";
                 
-                let count = parseInt(localStorage.getItem('vpn_download_count')) || 25430;
+                let count = parseInt(localStorage.getItem(`vpn_count_app_${appId}`)) || defaultCounts[appId];
                 count++;
-                localStorage.setItem('vpn_download_count', count);
+                localStorage.setItem(`vpn_count_app_${appId}`, count);
                 if(display) display.innerHTML = formatDownloads(count) + "+";
                 
-                // 🛠️ সবচেয়ে আধুনিক 'Iframe-Blob Method' যা মোবাইল ব্রাউজারকে ডিরেক্ট ডাউনলোড করতে বাধ্য করবে।
+                // ডিরেক্ট ব্যাকগ্রাউন্ড আইফ্রেম ডাউনলোড মেথড
                 const iframe = document.createElement('iframe');
                 iframe.style.display = 'none';
                 iframe.src = apkLink;
                 document.body.appendChild(iframe);
                 
-                // ৫ সেকেন্ড পর মেমোরি ক্লিয়ার করার জন্য iframe ডিলিট করা হবে
                 setTimeout(() => { document.body.removeChild(iframe); }, 5000);
                 
             }, 1500); 
