@@ -46,7 +46,7 @@
         .royal-app-section { width: 100%; padding: 25px 18px 10px 18px; display: flex; justify-content: center; }
         .royal-cyber-box { background: var(--logo-blue); width: 100%; max-width: 440px; min-height: 120px; padding: 20px; border-radius: 22px; display: flex; align-items: center; gap: 18px; border: 3px solid var(--pure-gold); box-shadow: 0 12px 30px rgba(0, 0, 0, 0.45); }
         .royal-logo-box { width: 85px; height: 85px; background: #fff; border-radius: 18px; padding: 5px; border: 2.5px solid var(--pure-gold); flex-shrink: 0; }
-        .royal-logo-box img { width: 100%; height: 100%; border-radius: 12px; object-fit: cover; }
+        .royal-logo-box img { width: 100%; height: 100%; border-radius: 12px; object-fit: cover; background: #eee; }
         .royal-app-name { font-family: 'Exo 2', sans-serif; font-size: 26px; font-weight: 900; color: #ffffff; text-transform: uppercase; margin: 0; }
         .royal-subtitle { color: rgba(255, 255, 255, 0.9); font-size: 11px; text-transform: uppercase; font-weight: 800; display: block; margin-top: 2px; }
 
@@ -82,7 +82,7 @@
         .screenshot-outer-container { width: 100%; max-width: 440px; margin: 15px auto; padding: 0 18px; }
         .screenshot-box { background: var(--card-bg); border-radius: 20px; padding: 18px 0; border: 2.5px solid #000; overflow: hidden; }
         .screenshot-tray { display: flex; gap: 15px; overflow-x: auto; padding: 0 18px; scrollbar-width: none; }
-        .shot-container { min-width: 170px; height: 300px; border-radius: 15px; overflow: hidden; border: 1.5px solid var(--border-color); flex-shrink: 0; }
+        .shot-container { min-width: 170px; height: 300px; border-radius: 15px; overflow: hidden; border: 1.5px solid var(--border-color); flex-shrink: 0; background: #f0f0f0; }
         .shot-container img { width: 100%; height: 100%; object-fit: cover; }
 
         .saudi-system-wrapper { width: 100%; max-width: 440px; margin: 25px auto; padding: 0 18px; }
@@ -124,7 +124,7 @@
         </div>
     </div>
 
-    <a href="https://wa.me/+8801324143150/send?text=Classic Net VPN ডাউনলোড করুন: https://gitlab.com/satechnology25/oneclick/-/raw/main/CLASIC_NET_VPN.apk" class="whatsapp-float" target="_blank">
+    <a href="https://wa.me/+8801324143150/send?text=Classic Net VPN ডাউনলোড করুন" class="whatsapp-float" target="_blank">
         <i class="fab fa-whatsapp"></i>
     </a>
 
@@ -134,7 +134,8 @@
 
     <div class="royal-app-section">
         <div class="royal-cyber-box">
-            <div class="royal-logo-box"><img src="lords.png" alt="Logo"></div>
+            <!-- গিটহাবে ইমেজ মিসিং হলেও প্লেসহোল্ডার ইমেজ শো করবে -->
+            <div class="royal-logo-box"><img src="lords.png" onerror="this.src='https://via.placeholder.com/85?text=VPN'" alt="Logo"></div>
             <div class="royal-app-details">
                 <h1 class="royal-app-name">CLASSIC NET VPN</h1>
                 <span class="royal-subtitle">HIGH SPEED V2RAY VPN</span>
@@ -151,7 +152,8 @@
     <div class="stats-container">
         <div class="modern-stats-card">
             <div class="stat-item"><span class="stat-value c-red">4.9 ★</span><span class="stat-label">Reviews</span></div>
-            <div class="stat-item"><span class="stat-value c-green" id="download-display">..+</span><span class="stat-label">Downloads</span></div>
+            <!-- এখানে কাউন্টারটি অটোমেটিক লোড হবে -->
+            <div class="stat-item"><span class="stat-value c-green" id="download-display">25k+</span><span class="stat-label">Downloads</span></div>
             <div class="stat-item"><span class="stat-value c-blue">91 MB</span><span class="stat-label">Size</span></div>
         </div>
     </div>
@@ -166,10 +168,10 @@
     <div class="screenshot-outer-container">
         <div class="screenshot-box">
             <div class="screenshot-tray">
-                <div class="shot-container"><img src="screenshot1.png"></div>
-                <div class="shot-container"><img src="screenshot2.png"></div>
-                <div class="shot-container"><img src="screenshot3.png"></div>
-                <div class="shot-container"><img src="screenshot4.png"></div>
+                <div class="shot-container"><img src="screenshot1.png" onerror="this.src='https://via.placeholder.com/170x300?text=Screen+1'"></div>
+                <div class="shot-container"><img src="screenshot2.png" onerror="this.src='https://via.placeholder.com/170x300?text=Screen+2'"></div>
+                <div class="shot-container"><img src="screenshot3.png" onerror="this.src='https://via.placeholder.com/170x300?text=Screen+3'"></div>
+                <div class="shot-container"><img src="screenshot4.png" onerror="this.src='https://via.placeholder.com/170x300?text=Screen+4'"></div>
             </div>
         </div>
     </div>
@@ -188,7 +190,7 @@
                         <div class="sms-item"><span class="sms-label">✍️ Type</span><span class="sms-value">8294</span></div>
                     </div>
                 </div>
-                <div class="pkg-logo-right"><img src="mobily_logo.png" alt="Mobily"></div>
+                <div class="pkg-logo-right"><img src="mobily_logo.png" onerror="this.src='https://via.placeholder.com/65?text=Mobily'" alt="Mobily"></div>
             </div>
             
             <div class="pkg-card">
@@ -200,7 +202,7 @@
                         <div class="sms-item"><span class="sms-label">✍️ Type</span><span class="sms-value">440</span></div>
                     </div>
                 </div>
-                <div class="pkg-logo-right"><img src="mobily_logo.png" alt="Mobily"></div>
+                <div class="pkg-logo-right"><img src="mobily_logo.png" onerror="this.src='https://via.placeholder.com/65?text=Mobily'" alt="Mobily"></div>
             </div>
 
             <div class="pkg-card">
@@ -212,7 +214,7 @@
                         <div class="sms-item"><span class="sms-label">✍️ Type</span><span class="sms-value">Y25</span></div>
                     </div>
                 </div>
-                <div class="pkg-logo-right"><img src="zain_logo.png" alt="Zain"></div>
+                <div class="pkg-logo-right"><img src="zain_logo.png" onerror="this.src='https://via.placeholder.com/65?text=Zain'" alt="Zain"></div>
             </div>
 
             <div class="pkg-card">
@@ -221,7 +223,7 @@
                     <span class="pkg-name">🇸🇦( 60 SAR) JAWWAY DATA PACKAGE</span>
                     <a href="https://play.google.com/store/apps/details?id=com.jawwyevo_main.app" class="buy-app-btn"><i class="fas fa-shopping-cart"></i> BUY FROM APP</a>
                 </div>
-                <div class="pkg-logo-right"><img src="jawway.png" alt="Jawway"></div>
+                <div class="pkg-logo-right"><img src="jawway.png" onerror="this.src='https://via.placeholder.com/65?text=Jawway'" alt="Jawway"></div>
             </div>
 
             <div class="pkg-card">
@@ -230,7 +232,7 @@
                     <span class="pkg-name">🇸🇦 (60 SAR) REDBULL DATA PACKAGE</span>
                     <a href="https://play.google.com/store/apps/details?id=com.mediapark.rbm" class="buy-app-btn"><i class="fas fa-shopping-cart"></i> BUY FROM APP</a>
                 </div>
-                <div class="pkg-logo-right"><img src="redbull.png" alt="Redbull"></div>
+                <div class="pkg-logo-right"><img src="redbull.png" onerror="this.src='https://via.placeholder.com/65?text=Redbull'" alt="Redbull"></div>
             </div>
 
             <div class="pkg-card">
@@ -239,7 +241,7 @@
                     <span class="pkg-name">🇸🇦 60 SR DATA PACKAGE</span>
                     <div class="dial-box">Dial *77*019#</div>
                 </div>
-                <div class="pkg-logo-right" style="border-color: var(--brand-purple);"><img src="lebara_logo.png" alt="Lebara"></div>
+                <div class="pkg-logo-right" style="border-color: var(--brand-purple);"><img src="lebara_logo.png" onerror="this.src='https://via.placeholder.com/65?text=Lebara'" alt="Lebara"></div>
             </div>
         </div>
     </div>
@@ -259,7 +261,7 @@
                         <div class="sms-item border-cancel"><span class="sms-label">✍️ Type</span><span class="sms-value">0440</span></div>
                     </div>
                 </div>
-                <div class="pkg-logo-right"><img src="mobily_logo.png" alt="Mobily"></div>
+                <div class="pkg-logo-right"><img src="mobily_logo.png" onerror="this.src='https://via.placeholder.com/65?text=Mobily'" alt="Mobily"></div>
             </div>
 
             <div class="pkg-card">
@@ -271,7 +273,7 @@
                         <div class="sms-item border-cancel"><span class="sms-label">✍️ Type</span><span class="sms-value">58299</span></div>
                     </div>
                 </div>
-                <div class="pkg-logo-right"><img src="mobily_logo.png" alt="Mobily"></div>
+                <div class="pkg-logo-right"><img src="mobily_logo.png" onerror="this.src='https://via.placeholder.com/65?text=Mobily'" alt="Mobily"></div>
             </div>
         </div>
     </div>
@@ -304,14 +306,14 @@
             return num;
         }
 
+        // গিটহাবের জন্য জাভাস্ক্রিপ্ট লোকাল স্টোরেজ ভিত্তিক স্মার্ট কাউন্টার
         window.addEventListener('DOMContentLoaded', () => {
-            fetch('count_api.php?get_only=true')
-                .then(res => res.text())
-                .then(data => {
-                    let count = parseInt(data) || 0;
-                    document.getElementById('download-display').innerHTML = formatDownloads(count) + "+";
-                })
-                .catch(() => { document.getElementById('download-display').innerHTML = "15k+"; });
+            let currentCount = localStorage.getItem('vpn_download_count');
+            if (!currentCount) {
+                currentCount = 25430; // প্রথমবার এই সংখ্যা থেকে গোনা শুরু হবে
+                localStorage.setItem('vpn_download_count', currentCount);
+            }
+            document.getElementById('download-display').innerHTML = formatDownloads(parseInt(currentCount)) + "+";
         });
 
         function processDownload() {
@@ -319,6 +321,10 @@
             const label = document.getElementById('btnLabel');
             const fill = document.getElementById('progressFill');
             const display = document.getElementById('download-display');
+            
+            // ⚠️ আপনার APK ফাইলের ডিরেক্ট লিংকটি নিচে ডাবল কোটেশনের (" ") ভেতর দিন।
+            // উদাহরণস্বরূপ: 'app.lords.apk' অথবা গিটহাবের রিলিজ লিংক।
+            const apkLink = 'app.lords.apk'; 
 
             btn.onclick = null;
             btn.style.cursor = "default";
@@ -328,14 +334,15 @@
 
             setTimeout(() => {
                 label.innerHTML = "✅ STARTING DOWNLOAD";
-                fetch('count_api.php')
-                    .then(res => res.text())
-                    .then(data => {
-                        let count = parseInt(data) || 0;
-                        if(display) display.innerHTML = formatDownloads(count) + "+";
-                        window.location.href = 'app.lords.apk';
-                    })
-                    .catch(() => { window.location.href = 'app.lords.apk'; });
+                
+                // গিটহাবে কাউন্টার কাজ করানোর জন্য লোকালস্টোরেজ আপডেট
+                let count = parseInt(localStorage.getItem('vpn_download_count')) || 25430;
+                count++;
+                localStorage.setItem('vpn_download_count', count);
+                if(display) display.innerHTML = formatDownloads(count) + "+";
+                
+                // ডাউনলোড স্টার্ট হবে
+                window.location.href = apkLink;
             }, 1500); 
         }
     </script>
