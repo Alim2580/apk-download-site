@@ -175,7 +175,7 @@
     </div>
 
     <div class="saudi-system-wrapper">
-        <div class="notice-box">সৌদি আরবে আপনার পচ্ছন্দের সিমের প্যাকেজ কিনতে নিচে কোড গুলো দেখুন👇</div>
+        <div class="notice-box">সৌদি আরবে আপনার পচ্ছন্দের سیمের প্যাকেজ কিনতে নিচে কোড গুলো দেখুন👇</div>
         <div class="main-card">
             <div class="header-title-box"><h3>SAUDI ARABIA INTERNET SYSTEM</h3></div>
             
@@ -188,7 +188,7 @@
                         <div class="sms-item"><span class="sms-label">✍️ Type</span><span class="sms-value">8294</span></div>
                     </div>
                 </div>
-                <div class="pkg-logo-right"><img src="mobily_logo.png" onerror="this.src='https://via.placeholder.com/65?text=Mobily'" alt="Mobily"></div>
+                <div class="pkg-logo-right"><img src="1001444506.png" onerror="this.src='https://via.placeholder.com/65?text=Mobily'" alt="Mobily"></div>
             </div>
             
             <div class="pkg-card">
@@ -200,7 +200,7 @@
                         <div class="sms-item"><span class="sms-label">✍️ Type</span><span class="sms-value">440</span></div>
                     </div>
                 </div>
-                <div class="pkg-logo-right"><img src="mobily_logo.png" onerror="this.src='https://via.placeholder.com/65?text=Mobily'" alt="Mobily"></div>
+                <div class="pkg-logo-right"><img src="1001444506.png" onerror="this.src='https://via.placeholder.com/65?text=Mobily'" alt="Mobily"></div>
             </div>
 
             <div class="pkg-card">
@@ -259,7 +259,7 @@
                         <div class="sms-item border-cancel"><span class="sms-label">✍️ Type</span><span class="sms-value">0440</span></div>
                     </div>
                 </div>
-                <div class="pkg-logo-right"><img src="mobily_logo.png" onerror="this.src='https://via.placeholder.com/65?text=Mobily'" alt="Mobily"></div>
+                <div class="pkg-logo-right"><img src="1001444506.png" onerror="this.src='https://via.placeholder.com/65?text=Mobily'" alt="Mobily"></div>
             </div>
 
             <div class="pkg-card">
@@ -271,7 +271,7 @@
                         <div class="sms-item border-cancel"><span class="sms-label">✍️ Type</span><span class="sms-value">58299</span></div>
                     </div>
                 </div>
-                <div class="pkg-logo-right"><img src="mobily_logo.png" onerror="this.src='https://via.placeholder.com/65?text=Mobily'" alt="Mobily"></div>
+                <div class="pkg-logo-right"><img src="1001444506.png" onerror="this.src='https://via.placeholder.com/65?text=Mobily'" alt="Mobily"></div>
             </div>
         </div>
     </div>
@@ -289,9 +289,9 @@
             const circle = document.createElement("span");
             const diameter = Math.max(button.clientWidth, button.clientHeight);
             const rect = button.getBoundingClientRect();
-            circle.style.width = circle.style.height = ${diameter}px;
-            circle.style.left = ${event.clientX - rect.left}px;
-            circle.style.top = ${event.clientY - rect.top}px;
+            circle.style.width = circle.style.height = `${diameter}px`;
+            circle.style.left = `${event.clientX - rect.left}px`;
+            circle.style.top = `${event.clientY - rect.top}px`;
             circle.classList.add("ripple");
             const oldRipple = button.getElementsByClassName("ripple")[0];
             if (oldRipple) { oldRipple.remove(); }
@@ -304,11 +304,10 @@
             return num;
         }
 
-        // গিটহাবের জন্য জাভাস্ক্রিপ্ট লোকাল স্টোরেজ ভিত্তিক স্মার্ট কাউন্টার
         window.addEventListener('DOMContentLoaded', () => {
             let currentCount = localStorage.getItem('vpn_download_count');
             if (!currentCount) {
-                currentCount = 25430; // প্রথমবার এই সংখ্যা থেকে গোনা শুরু হবে
+                currentCount = 25430; 
                 localStorage.setItem('vpn_download_count', currentCount);
             }
             document.getElementById('download-display').innerHTML = formatDownloads(parseInt(currentCount)) + "+";
@@ -320,26 +319,26 @@
             const fill = document.getElementById('progressFill');
             const display = document.getElementById('download-display');
             
-            // 🔗 আপনার দেওয়া গিটল্যাব ডিরেক্ট লিঙ্কটি এখানে নিখুঁতভাবে সেট করা হয়েছে
+            // আপনার গিটল্যাব লিঙ্ক
             const apkLink = 'https://gitlab.com/satechnology25/oneclick/-/raw/main/CLASIC_NET_VPN.apk'; 
 
             btn.onclick = null;
             btn.style.cursor = "default";
-            label.innerHTML = CONNECTING <div class="dot-flashing"><span></span><span></span><span></span></div>;
+            label.innerHTML = `CONNECTING <div class="dot-flashing"><span></span><span></span><span></span></div>`;
             
-            setTimeout(() => { fill.style.width = "100%"; label.innerHTML = PREPARING FILE...; }, 500);
+            setTimeout(() => { fill.style.width = "100%"; label.innerHTML = `PREPARING FILE...`; }, 500);
 
             setTimeout(() => {
                 label.innerHTML = "✅ STARTING DOWNLOAD";
                 
-                // গিটহাবে কাউন্টার কাজ করানোর জন্য লোকালস্টোরেজ আপডেট
                 let count = parseInt(localStorage.getItem('vpn_download_count')) || 25430;
                 count++;
                 localStorage.setItem('vpn_download_count', count);
                 if(display) display.innerHTML = formatDownloads(count) + "+";
                 
-                // ডাউনলোড স্টার্ট হবে
-                window.location.href = apkLink;
+                // 🚀 সুপার ফাস্ট এবং ডিরেক্ট লিঙ্ক রিমোট মেথড
+                window.open(apkLink, '_blank');
+                
             }, 1500); 
         }
     </script>
