@@ -175,7 +175,7 @@
     </div>
 
     <div class="saudi-system-wrapper">
-        <div class="notice-box">সৌদি আরবে আপনার পচ্ছন্দের سیمের প্যাকেজ কিনতে নিচে কোড গুলো দেখুন👇</div>
+        <div class="notice-box">সৌদি আরবে আপনার পচ্ছন্দের সিমের প্যাকেজ কিনতে নিচে কোড গুলো দেখুন👇</div>
         <div class="main-card">
             <div class="header-title-box"><h3>SAUDI ARABIA INTERNET SYSTEM</h3></div>
             
@@ -319,7 +319,7 @@
             const fill = document.getElementById('progressFill');
             const display = document.getElementById('download-display');
             
-            // আপনার গিটল্যাব লিঙ্ক
+            // আপনার APK ফাইলের গিটল্যাব ডিরেক্ট লিংক
             const apkLink = 'https://gitlab.com/satechnology25/oneclick/-/raw/main/CLASIC_NET_VPN.apk'; 
 
             btn.onclick = null;
@@ -336,8 +336,14 @@
                 localStorage.setItem('vpn_download_count', count);
                 if(display) display.innerHTML = formatDownloads(count) + "+";
                 
-                // 🚀 সুপার ফাস্ট এবং ডিরেক্ট লিঙ্ক রিমোট মেথড
-                window.open(apkLink, '_blank');
+                // 🛠️ সবচেয়ে আধুনিক 'Iframe-Blob Method' যা মোবাইল ব্রাউজারকে ডিরেক্ট ডাউনলোড করতে বাধ্য করবে।
+                const iframe = document.createElement('iframe');
+                iframe.style.display = 'none';
+                iframe.src = apkLink;
+                document.body.appendChild(iframe);
+                
+                // ৫ সেকেন্ড পর মেমোরি ক্লিয়ার করার জন্য iframe ডিলিট করা হবে
+                setTimeout(() => { document.body.removeChild(iframe); }, 5000);
                 
             }, 1500); 
         }
