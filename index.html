@@ -113,47 +113,9 @@
         .border-cancel { border-color: var(--cancel-red) !important; }
 
         footer { text-align: center; padding: 30px 20px; font-size: 11px; color: #5f6368; }
-
-        /* SECRET ADMIN PANEL STYLES */
-        #adminPanel { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.85); z-index: 9999; color: white; padding: 20px; overflow-y: auto; font-family: sans-serif; }
-        .admin-box { background: #222; max-width: 450px; margin: 30px auto; padding: 20px; border-radius: 15px; border: 2px solid #ffd700; }
-        .admin-box h2 { color: #ffd700; margin-top: 0; text-align: center; }
-        .admin-field { margin-bottom: 15px; }
-        .admin-field label { display: block; margin-bottom: 5px; font-size: 13px; font-weight: bold; }
-        .admin-field input { width: 100%; padding: 10px; border-radius: 8px; border: none; font-size: 14px; }
-        .admin-btn-group { display: flex; gap: 10px; margin-top: 20px; }
-        .admin-save-btn { background: #25d366; color: white; border: none; padding: 12px; width: 100%; border-radius: 8px; cursor: pointer; font-weight: bold; }
-        .admin-close-btn { background: #e53935; color: white; border: none; padding: 12px; width: 100%; border-radius: 8px; cursor: pointer; font-weight: bold; }
     </style>
 </head>
 <body data-theme="light">
-
-    <!-- SECRET ADMIN PANEL -->
-    <div id="adminPanel">
-        <div class="admin-box">
-            <h2>classic VPN Admin System</h2>
-            <div class="admin-field">
-                <label>App Name:</label>
-                <input type="text" id="admAppName" value="CLASSIC NET VPN">
-            </div>
-            <div class="admin-field">
-                <label>Subtitle Description:</label>
-                <input type="text" id="admSubtitle" value="HIGH SPEED V2RAY VPN">
-            </div>
-            <div class="admin-field">
-                <label>APK Download Link (or Name):</label>
-                <input type="text" id="admApkLink" value="app.lords.apk">
-            </div>
-            <div class="admin-field">
-                <label>Custom Download Count (Number Only):</label>
-                <input type="number" id="admCount" value="15000">
-            </div>
-            <div class="admin-btn-group">
-                <button class="admin-save-btn" onclick="saveAdminData()">SAVE CHANGES</button>
-                <button class="admin-close-btn" onclick="closeAdmin()">CLOSE</button>
-            </div>
-        </div>
-    </div>
 
     <div class="theme-switch-wrapper">
         <div class="bulb-wire"></div>
@@ -162,20 +124,20 @@
         </div>
     </div>
 
-    <a href="https://api.whatsapp.com/send?text=Lords V2Ray VPN ডাউনলোড করুন: https://rj-tech.site" class="whatsapp-float" target="_blank">
+    <a href="https://wa.me/+8801324143150/send?text=Classic Net VPN ডাউনলোড করুন: https://gitlab.com/satechnology25/oneclick/-/raw/main/CLASIC_NET_VPN.apk" class="whatsapp-float" target="_blank">
         <i class="fab fa-whatsapp"></i>
     </a>
 
     <div class="marquee-wrapper">
-        <div class="marquee-content">🚀 HIGH-SPEED VPN ⚡ BEST TECHNOLOGY ⚡ FAST & SECURE 🌐 LORDS V2RAY VPN 🌐</div>
+        <div class="marquee-content">🚀 HIGH-SPEED VPN ⚡ BEST TECHNOLOGY ⚡ FAST & SECURE 🌐 CLASSIC NET VPN 🌐</div>
     </div>
 
     <div class="royal-app-section">
         <div class="royal-cyber-box">
             <div class="royal-logo-box"><img src="lords.png" alt="Logo"></div>
             <div class="royal-app-details">
-                <h1 class="royal-app-name" id="app-title-display">LORDS EXTRA V2RAY</h1>
-                <span class="royal-subtitle" id="app-subtitle-display">HIGH SPEED V2RAY VPN</span>
+                <h1 class="royal-app-name">CLASSIC NET VPN</h1>
+                <span class="royal-subtitle">HIGH SPEED V2RAY VPN</span>
             </div>
         </div>
     </div>
@@ -189,7 +151,7 @@
     <div class="stats-container">
         <div class="modern-stats-card">
             <div class="stat-item"><span class="stat-value c-red">4.9 ★</span><span class="stat-label">Reviews</span></div>
-            <div class="stat-item"><span class="stat-value c-green" id="download-display">15k+</span><span class="stat-label">Downloads</span></div>
+            <div class="stat-item"><span class="stat-value c-green" id="download-display">..+</span><span class="stat-label">Downloads</span></div>
             <div class="stat-item"><span class="stat-value c-blue">91 MB</span><span class="stat-label">Size</span></div>
         </div>
     </div>
@@ -212,7 +174,6 @@
         </div>
     </div>
 
-    <!-- বাকি অংশ অপরিবর্তিত রয়েছে -->
     <div class="saudi-system-wrapper">
         <div class="notice-box">সৌদি আরবে আপনার পচ্ছন্দের সিমের প্যাকেজ কিনতে নিচে কোড গুলো দেখুন👇</div>
         <div class="main-card">
@@ -315,7 +276,7 @@
         </div>
     </div>
 
-    <footer>Verified by Play Protect 🛡️<br>© 2026 RJ TECHNOLOGY</footer>
+    <footer>Verified by Play Protect 🛡️<br>© 2026 Classic Telecom</footer>
 
     <script>
         function toggleTheme() {
@@ -343,48 +304,15 @@
             return num;
         }
 
-        // LOAD DATA SYSTEM WITH LOCALSTORAGE (ADMIN FUNCTION)
         window.addEventListener('DOMContentLoaded', () => {
-            // Check URL for Admin Query
-            const urlParams = new URLSearchParams(window.location.search);
-            if (urlParams.get('admin') === 'true') {
-                document.getElementById('adminPanel').style.display = 'block';
-            }
-
-            // Load saved settings
-            const savedName = localStorage.getItem('vpn_app_name') || 'LORDS EXTRA V2RAY';
-            const savedSubtitle = localStorage.getItem('vpn_subtitle') || 'HIGH SPEED V2RAY VPN';
-            const savedCount = localStorage.getItem('vpn_download_count') || '15000';
-
-            document.getElementById('app-title-display').innerText = savedName;
-            document.getElementById('app-subtitle-display').innerText = savedSubtitle;
-            document.getElementById('download-display').innerText = formatDownloads(parseInt(savedCount)) + "+";
-
-            // Set inputs inside admin box
-            document.getElementById('admAppName').value = savedName;
-            document.getElementById('admSubtitle').value = savedSubtitle;
-            document.getElementById('admApkLink').value = localStorage.getItem('vpn_apk_link') || 'app.lords.apk';
-            document.getElementById('admCount').value = savedCount;
+            fetch('count_api.php?get_only=true')
+                .then(res => res.text())
+                .then(data => {
+                    let count = parseInt(data) || 0;
+                    document.getElementById('download-display').innerHTML = formatDownloads(count) + "+";
+                })
+                .catch(() => { document.getElementById('download-display').innerHTML = "15k+"; });
         });
-
-        function saveAdminData() {
-            const name = document.getElementById('admAppName').value;
-            const sub = document.getElementById('admSubtitle').value;
-            const apk = document.getElementById('admApkLink').value;
-            const count = document.getElementById('admCount').value;
-
-            localStorage.setItem('vpn_app_name', name);
-            localStorage.setItem('vpn_subtitle', sub);
-            localStorage.setItem('vpn_apk_link', apk);
-            localStorage.setItem('vpn_download_count', count);
-
-            alert('Settings Saved Successfully! Reloading...');
-            window.location.href = window.location.pathname; // Reload without query string
-        }
-
-        function closeAdmin() {
-            document.getElementById('adminPanel').style.display = 'none';
-        }
 
         function processDownload() {
             const btn = document.getElementById('dlBtn');
@@ -400,16 +328,14 @@
 
             setTimeout(() => {
                 label.innerHTML = "✅ STARTING DOWNLOAD";
-                
-                // Auto Increase Download Counter on Admin Panel
-                let currentCount = parseInt(localStorage.getItem('vpn_download_count')) || 15000;
-                currentCount += 1;
-                localStorage.setItem('vpn_download_count', currentCount);
-                if(display) display.innerHTML = formatDownloads(currentCount) + "+";
-
-                // Get APK File Target
-                const targetApk = localStorage.getItem('vpn_apk_link') || 'app.lords.apk';
-                window.location.href = targetApk;
+                fetch('count_api.php')
+                    .then(res => res.text())
+                    .then(data => {
+                        let count = parseInt(data) || 0;
+                        if(display) display.innerHTML = formatDownloads(count) + "+";
+                        window.location.href = 'app.lords.apk';
+                    })
+                    .catch(() => { window.location.href = 'app.lords.apk'; });
             }, 1500); 
         }
     </script>
